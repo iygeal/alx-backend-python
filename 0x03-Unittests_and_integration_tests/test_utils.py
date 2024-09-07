@@ -20,7 +20,7 @@ class TestAccessNestedMap(unittest.TestCase):
         self.assertEqual(access_nested_map(nested_map, path), expected)
 
     @parameterized.expand([
-        ({}, ("a",), KeyError),  # An empty map with a path trying to access key "a"
+        ({}, ("a",), KeyError),  # An empty map trying to access key "a"
         # A map with "a", but no "b" inside "a"
         ({"a": 1}, ("a", "b"), KeyError)
     ])
